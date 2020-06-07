@@ -1,0 +1,98 @@
+#user {
+  width: 35%;
+  margin: 100px auto;
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  #user {
+    width: 70%;
+    margin: 120px auto;
+  }
+}
+@media (max-width: 400px) {
+  #user {
+    width: 70%;
+    margin: 10px auto;
+  }
+}
+
+#user .content {
+  background-color: white;
+  width: 100%;
+  height: 580px;
+}
+
+@media (max-width: 958px) {
+  #user .content {
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
+}
+#user .profile {
+  font-size: 80px;
+  color: #778899;
+  padding: 30px;
+  text-align: center;
+}
+
+#user .info {
+  font-size: 25px;
+  color: #37474f;
+  border-bottom: 1px solid #778899;
+}
+
+#user h2 {
+  font-size: 30px;
+  text-align: center;
+  padding: 10px;
+  color: #37474f;
+}
+
+#user .column {
+  float: left;
+  width: 50%;
+  font-size: 20px;
+}
+
+#user input {
+  height: 30px;
+  width: 180px;
+  border-radius: 100px;
+  border: 3px solid #37474f;
+}
+
+#user label {
+  color: #37474f;
+  padding: 10px;
+  font-size: 20px;
+}
+
+#user .row:after {
+  display: table;
+  clear: both;
+}
+
+@media screen and (max-width: 600px) {
+  #user .column {
+    width: 100%;
+  }
+}
+
+#user .update_btn {
+  width: 200px;
+  height: 50px;
+  border-radius: 25px;
+  background-color: #dc143c;
+  color: white;
+  border: 1px solid #dc143c;
+  text-transform: uppercase;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+#user .update_btn:hover {
+  columns: #dc143c;
+  background-color: white;
+  border: 1px solid #dc143c;
+  color: #dc143c;
+}

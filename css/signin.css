@@ -1,0 +1,83 @@
+#main {
+  width: 35%;
+  margin: 100px auto;
+}
+
+#main #tab-btn {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+#main .login,
+#main .register {
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  background-color: #37474f;
+  text-align: center;
+  color: white;
+  font-size: 25px;
+  padding: 10px;
+}
+
+#main .active {
+  background-color: #fff;
+  color: #000;
+}
+
+#main .content,
+#main .other {
+  width: 100%;
+  background-color: #fff;
+  padding: 30px;
+  box-shadow: 2px 2px 2px #333;
+}
+
+#main .other {
+  display: none;
+}
+
+#main .inp {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 25px;
+  font-size: 20px;
+  border: 2px solid #888;
+  background-color: white;
+  color: #666;
+}
+
+#main .inp:focus {
+  outline: none;
+  border: 2px solid #555;
+}
+
+#main #sub-btn1,
+#main #sub-btn2 {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: #dc143c;
+  color: white;
+  cursor: pointer;
+}
+
+#main #sub-btn:focus {
+  outline: none;
+}
+
+#main #sub-btn:active {
+  border: none;
+  margin-top: 5px;
+}
+
+#main h2 {
+  text-align: center;
+  padding-bottom: 15px;
+  color: #333;
+  font-size: 30px;
+  font-variant: small-caps;
+}

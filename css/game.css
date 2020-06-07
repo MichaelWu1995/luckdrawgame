@@ -1,0 +1,616 @@
+.mainbox {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  float: right;
+  text-align: center;
+  z-index: 1;
+  bottom: auto;
+  left: 50%;
+  top: 45%;
+  transform: translate(-50%, -50%);
+}
+
+@media (max-width: 500px) {
+  .mainbox {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+.marker {
+  position: relative;
+  width: 18%;
+  text-align: center;
+  top: 5%;
+  z-index: 3;
+}
+
+.box {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  border-radius: 50%;
+  border: 10px solid #fff;
+  overflow: hidden;
+  top: -50px;
+  z-index: 1;
+}
+
+.mainbox span {
+  width: 50%;
+  height: 50%;
+  display: inline-block;
+  position: absolute;
+  z-index: 1;
+}
+
+.span1 {
+  -webkit-clip-path: polygon(0 92%, 100% 50%, 0 8%);
+  clip-path: polygon(0 92%, 100% 50%, 0 8%);
+  background-color: gold;
+  top: 145px;
+  left: 0;
+  z-index: 1;
+}
+
+@media (max-width: 500px) {
+  .span1 {
+    top: 70px;
+  }
+}
+
+.span2 {
+  -webkit-clip-path: polygon(100% 92%, 0 50%, 100% 8%);
+  clip-path: polygon(100% 92%, 0 50%, 100% 8%);
+  background-color: red;
+  top: 145px;
+  right: 0;
+  z-index: 1;
+}
+
+@media (max-width: 500px) {
+  .span2 {
+    top: 70px;
+  }
+}
+
+.span3 {
+  -webkit-clip-path: polygon(50% 0%, 8% 100%, 92% 100%);
+  clip-path: polygon(50% 0%, 8% 100%, 92% 100%);
+  background-color: wheat;
+  bottom: 0;
+  left: 145px;
+  z-index: 1;
+  -webkit-clip-path: polygon(50% 0%, 8% 100%, 92% 100%);
+}
+
+@media (max-width: 500px) {
+  .span3 {
+    left: 70px;
+  }
+}
+
+.span4 {
+  -webkit-clip-path: polygon(50% 100%, 92% 0%, 8% 0);
+  clip-path: polygon(50% 100%, 92% 0%, 8% 0);
+  background-color: black;
+  top: 0;
+  left: 145px;
+  z-index: 1;
+}
+
+@media (max-width: 500px) {
+  .span4 {
+    left: 70px;
+  }
+}
+
+.box2 {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-135deg);
+  z-index: 1;
+}
+
+.box1 .span1 b {
+  font-size: 30px;
+  background-color: gold;
+  position: absolute;
+  z-index: 1;
+  /* text-align: center; */
+  top: 35%;
+  left: 3%;
+  width: 200px;
+  height: 95px;
+  line-height: 35px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+@media (max-width: 500px) {
+  .box1 .span1 b {
+    font-size: 15px;
+    top: 20%;
+    left: 0%;
+    width: 100px;
+  }
+}
+
+.box1 .span2 b {
+  font-size: 30px;
+  background-color: red;
+  position: absolute;
+  z-index: 1;
+  /* text-align: center; */
+  top: 35%;
+  left: 30%;
+  width: 200px;
+  height: 95px;
+  line-height: 35px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+@media (max-width: 500px) {
+  .box1 .span2 b {
+    font-size: 15px;
+    top: 20%;
+    right: 0%;
+    width: 100px;
+  }
+}
+
+.box1 .span3 b {
+  font-size: 30px;
+  background-color: wheat;
+  position: absolute;
+  z-index: 1;
+  /* text-align: center; */
+  top: 48%;
+  left: 15%;
+  width: 200px;
+  height: 95px;
+  line-height: 35px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  transform: rotate(-90deg);
+}
+
+@media (max-width: 500px) {
+  .box1 .span3 b {
+    font-size: 15px;
+    top: 35%;
+    right: 0%;
+    width: 100px;
+  }
+}
+
+.box1 .span4 b {
+  font-size: 30px;
+  background-color: black;
+  position: absolute;
+  z-index: 1;
+  /* text-align: center; */
+  top: 20%;
+  left: 18%;
+  width: 200px;
+  height: 95px;
+  line-height: 35px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  transform: rotate(-90deg);
+  color: white;
+}
+
+@media (max-width: 500px) {
+  .box1 .span4 b {
+    font-size: 15px;
+    top: 0%;
+    width: 100px;
+  }
+}
+
+.box2 .span4 b {
+  font-size: 30px;
+  background-color: black;
+  position: absolute;
+  z-index: 1;
+  /* text-align: center; */
+  top: 20%;
+  left: 18%;
+  width: 200px;
+  height: 95px;
+  line-height: 35px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  transform: rotate(-90deg);
+  color: white;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+}
+
+@media (max-width: 500px) {
+  .box2 .span4 b {
+    font-size: 15px;
+    top: 0%;
+    width: 100px;
+  }
+}
+
+.box2 .span3 b {
+  font-size: 30px;
+  background-color: wheat;
+  position: absolute;
+  z-index: 1;
+  /* text-align: center; */
+  top: 48%;
+  left: 15%;
+  width: 200px;
+  height: 95px;
+  line-height: 35px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+}
+
+@media (max-width: 500px) {
+  .box2 .span3 b {
+    font-size: 15px;
+    top: 30%;
+    right: 0%;
+    width: 100px;
+  }
+}
+
+.box2 .span2 b {
+  font-size: 30px;
+  background-color: red;
+  position: absolute;
+  z-index: 1;
+  /* text-align: center; */
+  top: 35%;
+  left: 30%;
+  width: 200px;
+  height: 95px;
+  line-height: 35px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+}
+
+@media (max-width: 500px) {
+  .box2 .span2 b {
+    font-size: 15px;
+    top: 18%;
+    right: 0%;
+    width: 100px;
+  }
+}
+
+.box2 .span1 b {
+  font-size: 30px;
+  background-color: gold;
+  position: absolute;
+  z-index: 1;
+  /* text-align: center; */
+  top: 35%;
+  left: 3%;
+  width: 200px;
+  height: 95px;
+  line-height: 35px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+}
+
+@media (max-width: 500px) {
+  .box2 .span1 b {
+    font-size: 15px;
+    top: 15%;
+    left: 0%;
+    width: 100px;
+  }
+}
+
+.mainbox .spin {
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  background-color: #ff5722;
+  color: #fff;
+  box-shadow: 0 5px 20px #000;
+  font-weight: bold;
+  font-size: 22px;
+  cursor: pointer;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+@media (max-width: 500px) {
+  .mainbox .spin {
+    width: 60px;
+    height: 60px;
+    font-size: 11px;
+    top: 58%;
+  }
+}
+
+.mainbox .spin:active {
+  width: 135px;
+  height: 135px;
+  font-size: 20px;
+}
+
+@media (max-width: 500px) {
+  .mainbox .spin:active {
+    width: 75px;
+    height: 75px;
+    font-size: 15px;
+  }
+}
+
+.mainbox.animate:after {
+  animation: animateArrow 0.7s ease infinite;
+  -webkit-animation: animateArrow 0.7s ease infinite;
+}
+
+canvas {
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  text-align: center;
+  z-index: 0;
+}
+
+.myText {
+  margin: 10px;
+  text-align: center;
+  height: 35px;
+  font-size: 16pt;
+  width: 200px;
+}
+
+#btn2 {
+  border-radius: 50px;
+  width: 70%;
+  height: 30px;
+  background-color: yellow;
+  border-color: yellow;
+  font-size: 15pt;
+  margin: 20px 10px;
+}
+
+.toggle-btn span {
+  display: block;
+  width: 30px;
+  height: 5px;
+  background: white;
+  margin: 5px 0px;
+}
+
+.toggle-btn {
+  position: absolute;
+  left: 100px;
+  top: 20px;
+}
+
+.toggle-btn .popuptext {
+  display: none;
+  width: 200px;
+  height: 35px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  top: 125%;
+  left: 50%;
+  margin-left: -80px;
+}
+
+.toggle-btn .popuptext::after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-width: 0 10px 10px;
+  border-style: solid;
+  border-color: transparent transparent #555;
+  position: absolute;
+  left: 80px;
+  top: -10px;
+}
+
+/* 用图片当中奖页面 */
+
+#succPop {
+  width: 100%;
+  height: 800px;
+  overflow: hidden;
+  background: rgba(32, 32, 32, 0.8);
+  box-shadow: 0 0 20px black;
+  border-radius: 8px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+  padding: 10px;
+  text-align: center;
+  display: none;
+  position: absolute;
+  margin-top: 30px;
+}
+
+@media (max-width: 500px) {
+  #succPop {
+    height: 600px;
+  }
+}
+
+#succBox {
+  width: 500px;
+  height: 340px;
+  overflow: hidden;
+  background: #f1f1f1;
+  border-radius: 8px;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  padding: 10px;
+  text-align: center;
+  display: none;
+  background-image: url("../images/Congratulations!!!.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-size: 100% 100%;
+}
+
+@media (max-width: 500px) {
+  #succBox {
+    width: 100%;
+  }
+}
+
+.container #succPop #succBox h1 {
+  color: whitesmoke;
+}
+
+.close {
+  font-size: 20px;
+  color: white;
+  padding: 10px 30px;
+  cursor: pointer;
+  background: #c0392b;
+  display: inline-block;
+  border-radius: 4px;
+  position: absolute;
+  top: 280px;
+  left: 190px;
+}
+
+@media (max-width: 500px) {
+  .close {
+    left: 100px;
+  }
+}
+
+.result {
+  font-size: 40px;
+  font-weight: 700;
+  color: white;
+  position: absolute;
+  top: 180px;
+  left: 280px;
+}
+
+@media (max-width: 500px) {
+  .result {
+    top: 160px;
+    left: 180px;
+    font-weight: 500;
+  }
+}
+
+/* 用图片当未中奖页面 */
+
+#failPop {
+  width: 100%;
+  height: 800px;
+  overflow: hidden;
+  background: rgba(32, 32, 32, 0.8);
+  box-shadow: 0 0 20px black;
+  border-radius: 8px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+  padding: 10px;
+  text-align: center;
+  display: none;
+  position: absolute;
+  margin-top: 30px;
+}
+
+@media (max-width: 500px) {
+  #failPop {
+    height: 600px;
+  }
+}
+
+#loseBox {
+  width: 480px;
+  height: 336px;
+  overflow: hidden;
+  background: #f1f1f1;
+  box-shadow: 0 0 20px black;
+  border-radius: 8px;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  padding: 10px;
+  text-align: center;
+  display: none;
+  background-image: url("../images/lose2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-size: 100% 100%;
+}
+
+@media (max-width: 500px) {
+  #loseBox {
+    width: 100%;
+    font-size: 10px;
+  }
+}
+
+.container #losePop h1 {
+  color: black;
+}
+
+#closebtn {
+  color: white;
+  position: absolute;
+  top: 3px;
+  left: 260px;
+  font-size: 50px;
+  background-color: transparent;
+  border: none;
+}

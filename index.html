@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lucky Draw</title>
+    <link rel="stylesheet" href="./css/shared.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/game.css">
+
+    <script
+      src="https://kit.fontawesome.com/a70140e5b0.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-auth.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-database.js"></script>
+  </head>
+
+  <body id="shadow">
+    <div class="bg-img">
+      <nav>
+        <input type="checkbox" id="check" />
+
+        <label for="check" class="checkbtn">
+          <i class="fas fa-bars"></i>
+        </label>
+
+        <label for="" class="logo"
+          ><img src="./images/logo.png" alt="" id="logo"
+        /></label>
+        <ul>
+          <li><a class="active" href="index.html">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact us</a></li>
+          <li>
+            <a href="signin.html"
+              ><input type="button" value="Update Price" id="signout_btn"
+            /></a>
+          </li>
+        </ul>
+      </nav>
+
+      <div id="mainbox" class="mainbox container">
+        <img class="marker" src="images/marker.png" />
+      
+        <div id="box" class="box">
+          <div class="box1">
+            <span class="span1" id="span1"><b id="span1_one"></b></span>
+            <span class="span2" id="span2"><b id="span1_two"></b></span>
+            <span class="span3" id="span3"><b id="span1_three"></b></span>
+            <span class="span4" id="span4"><b id="span1_four"></b></span>
+          </div>
+          <div class="box2">
+            <span class="span1" id="span5"><b id="span2_one"></b></span>
+            <span class="span2" id="span6"><b id="span2_two"></b></span>
+            <span class="span3" id="span7"><b id="span2_three"></b></span>
+            <span class="span4" id="span8"><b id="span2_four"></b></span>
+          </div>
+        </div>
+        <button class="spin" onclick="myfunction()">PRESS</button>
+        <canvas id="canvas"></canvas>
+      
+        <!-- 中奖页面 -->
+        <div id="succPop">
+          <div id="succBox">
+            <div class="result" id="result"></div>
+            <button onclick="popClose()" class="close">Close</button>
+          </div>
+        </div>
+      
+        <!-- 未中奖页面 -->
+        <div id="failPop">
+          <div id="loseBox">
+            <h1>Thanks for your participation</h1>
+            <a onclick="losePopClose()" class="close">Close</a>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+
+
+    <audio src="sound/game music.mp3" id="bgm" loop="loop"></audio>
+    <audio src="sound/lose.mp3" id="lose"></audio>
+    <audio src="sound/success.mp3" id="success"></audio>
+
+    
+
+    <footer>
+      <p>
+        Copyright &copy; 2020 -
+        <a href="https://www.iabrahampos.com/">Iabrahampos</a>
+      </p>
+    </footer>
+
+    <script src="js/firebase.js"></script>
+    <script src="js/game.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.2.0/dist/confetti.browser.min.js"></script>
+  </body>
+</html>

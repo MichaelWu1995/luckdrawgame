@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/shared.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/price.css" />
+
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-database.js"></script>
+  </head>
+
+  <body>
+    <div class="bg-img">
+      <nav>
+        <input type="checkbox" id="check" />
+
+        <label for="check" class="checkbtn">
+          <i class="fas fa-bars"></i>
+        </label>
+
+        <label for="" class="logo"
+          ><img src="./images/logo.png" alt="" id="logo"
+        /></label>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact us</a></li>
+          <li>
+            <input type="button" value="Sign Out" id="out_btn" />
+          </li>
+        </ul>
+      </nav>
+
+      <div id="user">
+        <div class="content">
+          <div class="profile">
+            <i class="far fa-user-circle"></i>
+
+            <p class="info" id="email"></p>
+            <h2>Change Your Price Here</h2>
+
+            <div class="row">
+              <div class="column">
+                <h3>Award List</h3>
+                <label for="text">1st Item:</label>
+                <input
+                  type="text"
+                  name="price1"
+                  id="price1"
+                  placeholder="Enter item 1..."
+                />
+
+                <br /><br />
+
+                <label for="text">2nd Item:</label>
+                <input
+                  type="text"
+                  name="price2"
+                  id="price2"
+                  placeholder="Enter item 2..."
+                />
+                <br /><br />
+
+                <label for="text">3rd Item:</label>
+                <input
+                  type="text"
+                  name="price3"
+                  id="price3"
+                  placeholder="Enter item 3..."
+                />
+                <br /><br />
+
+                <label for="text">4th Item:</label>
+                <input
+                  type="text"
+                  name="price4"
+                  id="price4"
+                  placeholder="Enter item 4..."
+                />
+              </div>
+
+              <div class="column">
+                <h3>No Award List</h3>
+                <label for="text">1st Item: </label>
+                <input
+                  type="text"
+                  name="price5"
+                  id="price5"
+                  placeholder="Enter item 1..."
+                />
+
+                <br /><br />
+
+                <label for="text">2nd Item:</label>
+                <input
+                  type="text"
+                  name="price6"
+                  id="price6"
+                  placeholder="Enter item 2..."
+                />
+                <br /><br />
+
+                <label for="text">3rd Item:</label>
+                <input
+                  type="text"
+                  name="price7"
+                  id="price7"
+                  placeholder="Enter item 3..."
+                />
+                <br /><br />
+
+                <label for="text">4th Item:</label>
+                <input
+                  type="text"
+                  name="price8"
+                  id="price8"
+                  placeholder="Enter item 4..."
+                />
+              </div>
+
+              <input
+                type="button"
+                class="update_btn"
+                value="Update Price"
+                id="add_btn"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p>
+        Copyright &copy; 2020 -
+        <a href="https://www.iabrahampos.com/">Iabrahampos</a>
+      </p>
+    </footer>
+
+    <script src="./js/firebase.js"></script>
+    <script src="./js/price.js"></script>
+  </body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/shared.css" />
+    <link rel="stylesheet" href="./css/signin.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-auth.js"></script>
+    
+  </head>
+
+  <body>
+    <div class="bg-img">
+      <nav>
+        <input type="checkbox" id="check" />
+
+        <label for="check" class="checkbtn">
+          <i class="fas fa-bars"></i>
+        </label>
+
+        <label for="" class="logo"
+          ><img src="./images/logo.png" alt="" id="logo"
+        /></label>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact us</a></li>
+          <li>
+            <a href="signin.html"
+              ><input type="button" value="Update Price"
+            /></a>
+          </li>
+        </ul>
+      </nav>
+
+      <div id="main">
+        <div id="tab-btn">
+          <a href="#" class="login active">Sign In</a>
+          <a href="#" class="register">Sign Up</a>
+        </div>
+
+        <div class="content">
+          <h2>Signin To Your Account</h2>
+          <form action="#" method="POST" id="login-box">
+            <input
+              type="text"
+              name="username"
+              placeholder="Email Address..."
+              class="inp"
+              id="in_email"
+              autocomplete="on"
+              autofocus
+            /><br />
+
+            <input
+              type="password"
+              name="password"
+              placeholder="Password..."
+              class="inp"
+              id="in_password"
+              autocomplete="on"
+            /><br />
+
+            <input
+              type="button"
+              value="SIGN IN"
+              id="sub-btn1"
+              autocomplete="on"
+            />
+          </form>
+        </div>
+
+        <div class="other">
+          <h2>Register With Us!</h2>
+          <form action="#" method="POST" id="reg-box">
+            <input
+              type="text"
+              name="uname"
+              placeholder="Enter Email Address here..."
+              class="inp"
+              id="up_email"
+              autocomplete="on"
+              autofocus
+            /><br />
+
+            <input
+              type="password"
+              name="pass"
+              placeholder="Enter Password..."
+              class="inp"
+              id="up_password1"
+              autocomplete="on"
+            /><br />
+
+            <input
+              type="password"
+              name="repass"
+              placeholder="Confirm Password..."
+              class="inp"
+              id="up_password2"
+              autocomplete="on"
+            /><br />
+
+            <input type="button" value="Update Price" id="sub-btn2" />
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p>
+        Copyright &copy; 2020 -
+        <a href="https://www.iabrahampos.com/">Iabrahampos</a>
+      </p>
+    </footer>
+
+    <script src="js/firebase.js"></script>
+    <script src="js/login.js"></script>
+  </body>
+</html>
