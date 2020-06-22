@@ -7,14 +7,53 @@ var loseMusic = document.getElementById("lose");
 var sucessMusic = document.getElementById("success");
 var canvas = document.getElementById("canvas");
 var awardList = [
-  "SAVE $0",
-  "SAVE $2",
-  "SAVE $0",
-  "SAVE $4",
-  "SAVE $0",
-  "SAVE $7",
-  "SAVE $0",
-  "SAVE $5",
+  {
+    id: 101,
+    award: "SAVE $0",
+    percent: 12.5,
+  },
+
+  {
+    id: 102,
+    award: "SAVE $2",
+    percent: 12.5,
+  },
+
+  {
+    id: 103,
+    award: "SAVE $3",
+    percent: 12.5,
+  },
+
+  {
+    id: 104,
+    award: "SAVE $4",
+    percent: 12.5,
+  },
+
+  {
+    id: 105,
+    award: "SAVE $5",
+    percent: 12.5,
+  },
+
+  {
+    id: 106,
+    award: "SAVE $6",
+    percent: 12.5,
+  },
+
+  {
+    id: 107,
+    award: "SAVE $7",
+    percent: 12.5,
+  },
+
+  {
+    id: 108,
+    award: "SAVE $8",
+    percent: 12.5,
+  },
 ];
 var coupon = canvas.getContext("2d");
 var c = 0;
@@ -109,7 +148,18 @@ function myfunction() {
   if (spin) {
     spin = false;
     music.play();
-    deg = Math.floor(3000 + Math.random() * 3000);
+    var percentage = Math.random() * 100;
+    var totalPercent = 0;
+    var deg;
+    for (var i = awardList.length - 1; i >= 0; i--) {
+      totalPercent += awardList[i].percent;
+      if (percentage <= totalPercent) {
+        console.log(totalPercent);
+        console.log(percentage);
+        deg = 3982.5 - 45 * i - Math.floor(Math.random() * 46);
+        break;
+      }
+    }
     wheel.style.transition = "all 10s ease-out";
     wheel.style.transform = "rotate(" + deg + "deg)";
 
@@ -118,6 +168,7 @@ function myfunction() {
       () => {
         wheel.style.transition = "none";
         var actualDeg = deg % 360;
+        console.log(actualDeg);
         wheel.style.transform = `rotate(${actualDeg}deg)`;
         music.pause();
         if (actualDeg >= 0 && actualDeg < 22.5) {
@@ -126,36 +177,37 @@ function myfunction() {
         } else if (actualDeg > 22.5 && actualDeg < 67.5) {
           sucessMusic.play();
           startFire();
-          succPop(awardList[5]);
+          succPop(awardList[7].award);
         } else if (actualDeg > 67.5 && actualDeg < 112.5) {
-          loseMusic.play();
-          losePop();
+          sucessMusic.play();
+          startFire();
+          succPop(awardList[6].award);
         } else if (actualDeg > 112.5 && actualDeg < 157.5) {
           sucessMusic.play();
           startFire();
-          succPop(awardList[7]);
+          succPop(awardList[5].award);
         } else if (actualDeg > 157.5 && actualDeg < 202.5) {
-          loseMusic.play();
-          losePop();
+          sucessMusic.play();
+          startFire();
+          succPop(awardList[4].award);
         } else if (actualDeg > 202.5 && actualDeg < 247.5) {
           sucessMusic.play();
           startFire();
-          succPop(awardList[3]);
+          succPop(awardList[3].award);
         } else if (actualDeg > 247.5 && actualDeg < 292.5) {
-          loseMusic.play();
-          losePop();
+          sucessMusic.play();
+          startFire();
+          succPop(awardList[2].award);
         } else if (actualDeg > 292.5 && actualDeg < 337.5) {
           sucessMusic.play();
           startFire();
-          succPop(awardList[1]);
-          // draw(awardList[6]);
+          succPop(awardList[1].award);
         } else if (actualDeg > 337.5 && actualDeg < 360) {
           loseMusic.play();
           losePop();
         } else {
           loseMusic.play();
           losePop();
-          // draw("try again");
         }
         spin = true;
       },
@@ -166,15 +218,15 @@ function myfunction() {
 
 //Update the price in the wheel
 function updatePrice() {
-  document.getElementById("span1_one").innerHTML = awardList[6];
-  document.getElementById("span1_two").innerHTML = awardList[2];
-  document.getElementById("span1_three").innerHTML = awardList[4];
-  document.getElementById("span1_four").innerHTML = awardList[0];
+  document.getElementById("span1_one").innerHTML = awardList[6].award;
+  document.getElementById("span1_two").innerHTML = awardList[2].award;
+  document.getElementById("span1_three").innerHTML = awardList[4].award;
+  document.getElementById("span1_four").innerHTML = awardList[0].award;
 
-  document.getElementById("span2_one").innerHTML = awardList[3];
-  document.getElementById("span2_two").innerHTML = awardList[5];
-  document.getElementById("span2_three").innerHTML = awardList[1];
-  document.getElementById("span2_four").innerHTML = awardList[7];
+  document.getElementById("span2_one").innerHTML = awardList[3].award;
+  document.getElementById("span2_two").innerHTML = awardList[7].award;
+  document.getElementById("span2_three").innerHTML = awardList[1].award;
+  document.getElementById("span2_four").innerHTML = awardList[5].award;
 }
 
 //Show the pop up input to let user enter the password
@@ -224,14 +276,33 @@ function popupClose() {
 
     function successFn(snapShot) {
       if (!!snapShot) {
-        awardList[0] = snapShot.val().item5;
-        awardList[2] = snapShot.val().item6;
-        awardList[4] = snapShot.val().item7;
-        awardList[6] = snapShot.val().item8;
-        awardList[1] = snapShot.val().item1;
-        awardList[3] = snapShot.val().item2;
-        awardList[5] = snapShot.val().item3;
-        awardList[7] = snapShot.val().item4;
+        awardList[0].award = snapShot.val()[0].award;
+        awardList[1].award = snapShot.val()[1].award;
+        awardList[2].award = snapShot.val()[2].award;
+        awardList[3].award = snapShot.val()[3].award;
+        awardList[4].award = snapShot.val()[4].award;
+        awardList[5].award = snapShot.val()[5].award;
+        awardList[6].award = snapShot.val()[6].award;
+        awardList[7].award = snapShot.val()[7].award;
+
+        awardList[0].percent = snapShot.val()[0].percent;
+        awardList[1].percent = snapShot.val()[1].percent;
+        awardList[2].percent = snapShot.val()[2].percent;
+        awardList[3].percent = snapShot.val()[3].percent;
+        awardList[4].percent = snapShot.val()[4].percent;
+        awardList[5].percent = snapShot.val()[5].percent;
+        awardList[6].percent = snapShot.val()[6].percent;
+        awardList[7].percent = snapShot.val()[7].percent;
+        // console.log(
+        //   awardList[0].percent,
+        //   awardList[1].percent,
+        //   awardList[2].percent,
+        //   awardList[3].percent,
+        //   awardList[4].percent,
+        //   awardList[5].percent,
+        //   awardList[6].percent,
+        //   awardList[7].percent
+        // );
         updatePrice();
       } else {
         console.log("no data found");
