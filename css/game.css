@@ -11,10 +11,17 @@
   transform: translate(-50%, -50%);
 }
 
-@media (max-width: 500px) {
+@media only screen and (min-device-width: 200px) and (max-device-width: 500px) {
   .mainbox {
     width: 300px;
     height: 300px;
+  }
+}
+
+@media only screen and (min-device-width: 500px) and (max-device-width: 900px) {
+  .mainbox {
+    width: 400px;
+    height: 400px;
   }
 }
 
@@ -54,9 +61,15 @@
   z-index: 1;
 }
 
-@media (max-width: 500px) {
+@media only screen and (min-device-width: 200px) and (max-device-width: 500px) {
   .span1 {
     top: 70px;
+  }
+}
+
+@media only screen and (min-device-width: 500px) and (max-device-width: 900px) {
+  .span1 {
+    top: 95px;
   }
 }
 
@@ -69,9 +82,15 @@
   z-index: 1;
 }
 
-@media (max-width: 500px) {
+@media only screen and (min-device-width: 200px) and (max-device-width: 500px) {
   .span2 {
     top: 70px;
+  }
+}
+
+@media only screen and (min-device-width: 500px) and (max-device-width: 900px) {
+  .span2 {
+    top: 95px;
   }
 }
 
@@ -85,9 +104,15 @@
   -webkit-clip-path: polygon(50% 0%, 8% 100%, 92% 100%);
 }
 
-@media (max-width: 500px) {
+@media only screen and (min-device-width: 200px) and (max-device-width: 500px) {
   .span3 {
     left: 70px;
+  }
+}
+
+@media only screen and (min-device-width: 500px) and (max-device-width: 900px) {
+  .span3 {
+    left: 95px;
   }
 }
 
@@ -100,9 +125,15 @@
   z-index: 1;
 }
 
-@media (max-width: 500px) {
+@media only screen and (min-device-width: 200px) and (max-device-width: 500px) {
   .span4 {
     left: 70px;
+  }
+}
+
+@media only screen and (min-device-width: 500px) and (max-device-width: 900px) {
+  .span4 {
+    left: 95px;
   }
 }
 
@@ -129,12 +160,21 @@
   display: flex;
 }
 
-@media (max-width: 500px) {
+@media only screen and (min-device-width: 200px) and (max-device-width: 500px) {
   .box1 .span1 b {
     font-size: 15px;
     top: 20%;
     left: 0%;
     width: 100px;
+  }
+}
+
+@media only screen and (min-device-width: 500px) and (max-device-width: 900px) {
+  .box1 .span1 b {
+    font-size: 23px;
+    top: 25%;
+    left: 0%;
+    width: 150px;
   }
 }
 
@@ -154,12 +194,21 @@
   display: flex;
 }
 
-@media (max-width: 500px) {
+@media only screen and (min-device-width: 200px) and (max-device-width: 500px) {
   .box1 .span2 b {
     font-size: 15px;
     top: 20%;
     right: 0%;
     width: 100px;
+  }
+}
+
+@media only screen and (min-device-width: 500px) and (max-device-width: 900px) {
+  .box1 .span2 b {
+    font-size: 23px;
+    top: 25%;
+    right: 0%;
+    width: 150px;
   }
 }
 
@@ -180,12 +229,21 @@
   transform: rotate(-90deg);
 }
 
-@media (max-width: 500px) {
+@media only screen and (min-device-width: 200px) and (max-device-width: 500px) {
   .box1 .span3 b {
     font-size: 15px;
     top: 35%;
     right: 0%;
     width: 100px;
+  }
+}
+
+@media only screen and (min-device-width: 500px) and (max-device-width: 900px) {
+  .box1 .span3 b {
+    font-size: 23px;
+    top: 35%;
+    left: 12%;
+    width: 150px;
   }
 }
 
@@ -207,11 +265,20 @@
   color: white;
 }
 
-@media (max-width: 500px) {
+@media only screen and (min-device-width: 200px) and (max-device-width: 500px) {
   .box1 .span4 b {
     font-size: 15px;
     top: 0%;
     width: 100px;
+  }
+}
+
+@media only screen and (min-device-width: 500px) and (max-device-width: 900px) {
+  .box1 .span4 b {
+    font-size: 23px;
+    top: 15%;
+    left: 12%;
+    width: 150px;
   }
 }
 
@@ -237,11 +304,20 @@
   -o-transform: rotate(-90deg);
 }
 
-@media (max-width: 500px) {
+@media only screen and (min-device-width: 200px) and (max-device-width: 500px) {
   .box2 .span4 b {
     font-size: 15px;
     top: 0%;
     width: 100px;
+  }
+}
+
+@media only screen and (min-device-width: 500px) and (max-device-width: 900px) {
+  .box2 .span4 b {
+    font-size: 23px;
+    top: 15%;
+    left: 12%;
+    width: 150px;
   }
 }
 
@@ -266,12 +342,21 @@
   -o-transform: rotate(90deg);
 }
 
-@media (max-width: 500px) {
+@media only screen and (min-device-width: 200px) and (max-device-width: 500px) {
   .box2 .span3 b {
     font-size: 15px;
     top: 30%;
     right: 0%;
     width: 100px;
+  }
+}
+
+@media only screen and (min-device-width: 500px) and (max-device-width: 900px) {
+  .box2 .span3 b {
+    font-size: 23px;
+    top: 40%;
+    left: 10%;
+    width: 150px;
   }
 }
 
@@ -296,12 +381,21 @@
   -o-transform: rotate(0deg);
 }
 
-@media (max-width: 500px) {
+@media only screen and (min-device-width: 200px) and (max-device-width: 500px) {
   .box2 .span2 b {
     font-size: 15px;
     top: 18%;
     right: 0%;
     width: 100px;
+  }
+}
+
+@media only screen and (min-device-width: 500px) and (max-device-width: 900px) {
+  .box2 .span2 b {
+    font-size: 23px;
+    top: 25%;
+    left: 25%;
+    width: 150px;
   }
 }
 
@@ -326,12 +420,21 @@
   -o-transform: rotate(0deg);
 }
 
-@media (max-width: 500px) {
+@media only screen and (min-device-width: 200px) and (max-device-width: 500px) {
   .box2 .span1 b {
     font-size: 15px;
     top: 15%;
     left: 0%;
     width: 100px;
+  }
+}
+
+@media only screen and (min-device-width: 500px) and (max-device-width: 900px) {
+  .box2 .span1 b {
+    font-size: 23px;
+    top: 25%;
+    left: 0%;
+    width: 150px;
   }
 }
 
@@ -357,12 +460,21 @@
   z-index: 1;
 }
 
-@media (max-width: 500px) {
+@media only screen and (min-device-width: 200px) and (max-device-width: 500px) {
   .mainbox .spin {
     width: 60px;
     height: 60px;
     font-size: 11px;
     top: 58%;
+  }
+}
+
+@media only screen and (min-device-width: 500px) and (max-device-width: 900px) {
+  .mainbox .spin {
+    width: 80px;
+    height: 80px;
+    font-size: 15px;
+    top: 62%;
   }
 }
 
@@ -372,11 +484,20 @@
   font-size: 20px;
 }
 
-@media (max-width: 500px) {
+@media only screen and (min-device-width: 200px) and (max-device-width: 500px) {
   .mainbox .spin:active {
     width: 75px;
     height: 75px;
     font-size: 15px;
+  }
+}
+
+@media only screen and (min-device-width: 500px) and (max-device-width: 900px) {
+  .mainbox .spin:active {
+    width: 100px;
+    height: 100px;
+    font-size: 25px;
+    top: 62%;
   }
 }
 
@@ -473,9 +594,15 @@ canvas {
   margin-top: 30px;
 }
 
-@media (max-width: 500px) {
+@media only screen and (min-device-width: 200px) and (max-device-width: 500px) {
   #succPop {
     height: 600px;
+  }
+}
+
+@media only screen and (min-device-width: 500px) and (max-device-width: 900px) {
+  #succPop {
+    height: 700px;
   }
 }
 
@@ -500,7 +627,13 @@ canvas {
   background-size: 100% 100%;
 }
 
-@media (max-width: 500px) {
+@media only screen and (min-device-width: 200px) and (max-device-width: 500px) {
+  #succBox {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-device-width: 500px) and (max-device-width:900px) {
   #succBox {
     width: 100%;
   }
@@ -523,9 +656,15 @@ canvas {
   left: 190px;
 }
 
-@media (max-width: 500px) {
+@media only screen and (min-device-width: 200px) and (max-device-width: 500px) {
   .close {
     left: 100px;
+  }
+}
+
+@media only screen and (min-device-width: 500px) and (max-device-width: 900px) {
+  .close {
+    left: 150px;
   }
 }
 
@@ -538,10 +677,18 @@ canvas {
   left: 280px;
 }
 
-@media (max-width: 500px) {
+@media only screen and (min-device-width: 200px) and (max-device-width: 500px) {
   .result {
     top: 160px;
     left: 180px;
+    font-weight: 500;
+  }
+}
+
+@media only screen and (min-device-width: 500px) and (max-device-width: 900px) {
+  .result {
+    top: 180px;
+    left: 250px;
     font-weight: 500;
   }
 }
@@ -566,9 +713,15 @@ canvas {
   margin-top: 30px;
 }
 
-@media (max-width: 500px) {
+@media only screen and (min-device-width: 200px) and (max-device-width: 500px) {
   #failPop {
     height: 600px;
+  }
+}
+
+@media only screen and (min-device-width: 500px) and (max-device-width: 900px) {
+  #failPop {
+    height: 700px;
   }
 }
 
@@ -594,10 +747,17 @@ canvas {
   background-size: 100% 100%;
 }
 
-@media (max-width: 500px) {
+@media only screen and (min-device-width: 200px) and (max-device-width: 500px) {
   #loseBox {
     width: 100%;
     font-size: 10px;
+  }
+}
+
+@media only screen and (min-device-width: 500px) and (max-device-width: 900px) {
+  #loseBox {
+    width: 100%;
+    font-size: 15px;
   }
 }
 

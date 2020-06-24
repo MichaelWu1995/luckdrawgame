@@ -3,9 +3,16 @@
   margin: 100px auto;
 }
 
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) {
   #user {
     width: 70%;
+    margin: 40px auto;
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  #user {
+    width: 80%;
     margin: 120px auto;
   }
 }
@@ -13,15 +20,7 @@
 @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) {
   #user {
     width: 70%;
-    margin: 300px auto;
-  }
-}
-
-
-@media (max-width: 400px) {
-  #user {
-    width: 70%;
-    margin: 10px auto;
+    margin: 200px auto;
   }
 }
 
@@ -31,6 +30,41 @@
   height: 580px;
   overflow-x: hidden;
   overflow-y: scroll;
+}
+
+@media only screen and (min-device-width: 320px) and (min-device-height: 568px) {
+  #user .content {
+    width: 100%;
+    height: 300px;
+  }
+}
+
+@media only screen and (min-device-width: 375px) and (min-device-height: 667px) {
+  #user .content {
+    width: 100%;
+    height: 400px;
+  }
+}
+
+@media only screen and (min-device-width: 375px) and (min-device-height: 812px) {
+  #user .content {
+    width: 100%;
+    height: 500px;
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  #user .content {
+    width: 100%;
+    height: 600px;
+  }
+}
+
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) {
+  #user .content {
+    width: 100%;
+    height: 800px;
+  }
 }
 
 #user .profile {
