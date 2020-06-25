@@ -54,25 +54,25 @@
 }
 
 
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+@media (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
   #user .content {
     height: 600px;
   }
 }
 
-@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (orientation: portrait) {
+@media (min-device-width: 1024px) and (max-device-width: 1366px) and (orientation: portrait) {
   #user .content {
     height: 800px;
   }
 }
 
-@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (orientation: landscape) {
+@media (min-device-width: 1024px) and (max-device-width: 1366px) and (orientation: landscape) {
   #user .content {
     height: 750px;
   }
 }
 
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+@media (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
   #user .content {
     height: 500px;
   }
@@ -126,7 +126,7 @@
   background-origin: content-box;
 }
 
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+@media (min-device-width: 768px) and (max-device-width: 1024px) {
   #user .column2 input {
     width: 180px;
     border-radius: 90px;
