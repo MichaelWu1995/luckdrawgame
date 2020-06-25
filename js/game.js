@@ -147,6 +147,7 @@ function losePopClose() {
 function myfunction() {
   if (spin) {
     spin = false;
+    document.getElementById("btn-spin").disabled = true;
     music.play();
     var percentage = Math.random() * 100;
     var totalPercent = 0;
@@ -160,6 +161,7 @@ function myfunction() {
         break;
       }
     }
+    
     wheel.style.transition = "all 10s ease-out";
     wheel.style.transform = "rotate(" + deg + "deg)";
 
@@ -210,6 +212,7 @@ function myfunction() {
           losePop();
         }
         spin = true;
+        document.getElementById("btn-spin").disabled = false;
       },
       { once: true }
     );
