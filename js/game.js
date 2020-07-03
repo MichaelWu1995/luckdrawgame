@@ -15,7 +15,7 @@ var awardList = [
 
   {
     id: 102,
-    award: "SAVE $2",
+    award: "COLES $100",
     percent: 12.5,
   },
 
